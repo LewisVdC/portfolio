@@ -1,0 +1,3 @@
+npm run dev             run locally
+npm run build           build index.html file
+npm run deploy          deploy to git pages
