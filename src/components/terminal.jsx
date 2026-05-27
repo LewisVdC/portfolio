@@ -6,8 +6,12 @@ export default function Terminal() {
     setOutput((prev) => [...prev, "user@pc:~$ " + text]);
     if (text === "projects") {
       outputtext("Loading...");
+    } else if (text === "clear") {
+      setOutput("user@pc:~$ ");
     } else if (text === "help") {
       outputtext("available commands");
+      outputtext("'help'  - show this info");
+      outputtext("'clear'  - clear terminal");
       outputtext("'projects'  - list all projects");
     } else {
       setOutput((prev) => [...prev, `'${text}' is not recognized as command`]);
