@@ -86,4 +86,13 @@ div#terminaltext {
 }
 div#terminal {
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow-y: auto;
+  mask-image: linear-gradient(
+    to top,
+    transparent 0%,
+    black 0%,
+    black 25vh,
+    transparent 100%
+  );
 }

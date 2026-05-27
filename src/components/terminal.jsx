@@ -10,10 +10,7 @@ export default function Terminal() {
       outputtext("available commands");
       outputtext("'projects'  - list all projects");
     } else {
-      setOutput((prev) => [
-        ...prev,
-        "'" + text + "' is not recognized as command",
-      ]);
+      setOutput((prev) => [...prev, `'${text}' is not recognized as command`]);
     }
     setText("");
     outputtext("empty");
