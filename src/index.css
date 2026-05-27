@@ -70,3 +70,20 @@ div#top {
   position: absolute;
   top: 5%;
 }
+#hiddeninput {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+}
+div#terminaltext {
+  display: flex;
+  flex-direction: column;
+}
+.nomargin {
+  margin: 0;
+}
+div#terminal {
+  backdrop-filter: blur(10px);
+}
