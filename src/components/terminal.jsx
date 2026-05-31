@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function Terminal() {
+export default function Terminal({ setpage }) {
+  useEffect(() => {
+    // use this or it sets mid render and breaks
+    setpage("aboutme");
+  }, []);
   const buffer = "";
   function handleEnter() {
     setOutput((prev) => [...prev, "user@pc:~$ " + text]);
     if (text === "projects") {
       outputtext("Loading...");
+      setpage("projects");
+    } else if (text === "aboutme") {
+      outputtext("Loading...");
+      setpage("aboutme");
     } else if (text === "clear") {
       setOutput([]);
     } else if (text === "help") {
@@ -13,6 +21,7 @@ export default function Terminal() {
       outputtext("'help'  - show this info");
       outputtext("'clear'  - clear terminal");
       outputtext("'projects'  - list all projects");
+      outputtext("'aboutme' - show about me");
     } else {
       setOutput((prev) => [...prev, `'${text}' is not recognized as command`]);
     }
