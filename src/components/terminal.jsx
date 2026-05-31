@@ -7,7 +7,7 @@ export default function Terminal() {
     if (text === "projects") {
       outputtext("Loading...");
     } else if (text === "clear") {
-      setOutput("user@pc:~$ ");
+      setOutput([]);
     } else if (text === "help") {
       outputtext("available commands");
       outputtext("'help'  - show this info");

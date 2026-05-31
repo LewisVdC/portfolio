@@ -1,5 +1,5 @@
 import "./App.css";
-import Terminal from "./components/Terminal.jsx";
+import Terminal from "./components/terminal.jsx";
 
 function App() {
   return (
