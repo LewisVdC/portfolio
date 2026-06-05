@@ -4,6 +4,8 @@ export default function Terminal({ setpage }) {
   useEffect(() => {
     // use this or it sets mid render and breaks
     setpage("aboutme");
+    outputtext("Welcome! use 'help' for more information");
+    outputtext("empty");
   }, []);
   const buffer = "";
   function handleEnter() {
@@ -40,8 +42,6 @@ export default function Terminal({ setpage }) {
       setOutput((prev) => [...prev, text]);
     }
   }
-  outputtext("Welcome! use 'help' for more information");
-  outputtext("empty");
 
   useEffect(() => {
     const focusInput = () => inputRef.current?.focus();
