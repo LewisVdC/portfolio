@@ -1,11 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Terminal({ setpage }) {
+  const start = useRef(false);
   useEffect(() => {
     // use this or it sets mid render and breaks
     setpage("aboutme");
-    outputtext("Welcome! use 'help' for more information");
-    outputtext("empty");
+
+    if (start.current == false) {
+      start.current = true;
+      outputtext("Welcome! use 'help' for more information");
+      outputtext("empty");
+    }
   }, []);
   const buffer = "";
   function handleEnter() {
