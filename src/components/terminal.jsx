@@ -29,8 +29,6 @@ export default function Terminal({ setpage }) {
     outputtext("empty");
   }
 
-  outputtext("Welcome! use 'help' for more information");
-  outputtext("empty");
   const inputRef = useRef(null);
   const [text, setText] = useState("");
   const [output, setOutput] = useState([]);
@@ -42,6 +40,8 @@ export default function Terminal({ setpage }) {
       setOutput((prev) => [...prev, text]);
     }
   }
+  outputtext("Welcome! use 'help' for more information");
+  outputtext("empty");
 
   useEffect(() => {
     const focusInput = () => inputRef.current?.focus();
