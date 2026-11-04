@@ -93,6 +93,66 @@ div#terminal {
     transparent 0%,
     black 0%,
     black 25vh,
-    transparent 50vh
+    transparent 35vh
   );
+}
+.projectsgrid {
+  display: grid;
+  width: max-content;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 15vw);
+  background-color: white;
+  padding: 10px;
+  gap: 5vw;
+}
+.projectsgrid div {
+  background-color: blue;
+  border: 1px solid black;
+  text-align: center;
+  height: 15vw;
+}
+div#project1 {
+  grid-column: span 2;
+}
+div#projectgridmain {
+  margin-left: 7vw;
+  width: 100%;
+}
+.textbox {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+    border-color 0.3s ease;
+  will-change: transform;
+
+  margin: 5%;
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+.textbox:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+div#aboutmebox {
+  display: flex;
+  width: 95vw;
+}
+.textbox.wide {
+  width: 30%;
+  aspect-ratio: 3/1;
+}
+.textbox.small {
+  width: 10%;
+  aspect-ratio: 1/1;
+}
+.centertext {
+  text-align: center;
 }

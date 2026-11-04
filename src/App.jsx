@@ -2,7 +2,7 @@ import "./App.css";
 
 import { useState } from "react";
 
-import Terminal from "./components/terminal.jsx";
+import Terminal from "./components/Terminal.jsx";
 import Top from "./components/top.jsx";
 
 function App() {
